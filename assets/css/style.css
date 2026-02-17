@@ -1075,77 +1075,85 @@ header {
 
 /* --- Media Queries --- */
 @media (max-width: 991px) {
-    /* 1. منع الحركة يمين وشمال نهائياً */
+    /* 1. منع الحركة يمين وشمال تماماً */
     html, body {
         overflow-x: hidden !important;
-        position: relative;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    /* 2. إصلاح الخلفية (عشان تغطي الموقع كله مهما نزلت) */
-    .wave-background {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: -1;
-        background-size: cover !important;
-    }
-
-    /* 3. إصلاح الهيدر (عشان يفضل ثابت في مكانه وميختفيش) */
+    /* 2. الهيدر: بسيط وشيك زي Essam */
     header {
-        position: fixed;
-        width: 100% !important;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        padding: 5px !important;
+        background: rgba(10, 10, 25, 0.9); /* خلفية غامقة شفافة */
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 20px !important;
     }
 
     .floating-nav {
-        width: 90% !important;
-        margin: 0 auto !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        justify-content: space-between !important;
+        width: 100% !important;
     }
 
-    /* 4. إصلاح قسم الـ Hero (حل مشكلة الصورة اللي بتزق الموقع) */
+    .nav-links {
+        display: none !important; /* مؤقتاً عشان زحمة الموبايل، أو صغر الخط جداً */
+    }
+
+    /* 3. الهيرو: توسيط كامل وصورة متناسقة */
     .hero {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+        flex-direction: column-reverse !important; /* النص الأول وبعده الصورة */
         text-align: center !important;
-        overflow: hidden !important;
-        padding-top: 100px !important;
+        padding-top: 120px !important;
+        min-height: auto !important;
     }
 
     .hero-img img {
-        width: 200px !important; /* تصغير الصورة عشان متزقش الشاشة */
-        height: auto !important;
-        margin: 0 auto !important;
+        width: 180px !important; /* حجم مثالي للموبايل */
+        height: 180px !important;
+        border-radius: 50%;
+        margin-bottom: 30px !important;
+        border: 4px solid #00a2ff;
+        box-shadow: 0 0 20px rgba(0, 162, 255, 0.3);
     }
 
     .hero-text h1 {
-        font-size: 22px !important;
-        word-wrap: break-word !important;
+        font-size: 26px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
     }
 
-    /* 5. إصلاح قسم About Me (حل مشكلة الكلام المقطوع) */
-    .about-content {
-        width: 100% !important;
-        padding: 0 10px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+    .hero-text p {
+        font-size: 14px !important;
+        max-width: 90% !important;
+        margin: 0 auto 25px !important;
     }
 
-    .about-info h3, .about-info p {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+    /* 4. قسم About: كروت بسيطة ومنظمة (image_c1866e.png) */
+    .about-card, .resume-item, .skill-category {
+        background: rgba(255, 255, 255, 0.03) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 20px !important;
+        width: 95% !important;
+        margin: 0 auto 15px !important;
+        padding: 25px !important;
     }
 
-    .about-card {
-        width: 95% !important; /* الكروت تبقى جوه الشاشة */
-        margin: 10px auto !important;
+    .about-details {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* كارت واحد في كل سطر */
+        gap: 15px !important;
+    }
+
+    /* 5. الخلفية: ثابتة وتغطي كل شيء */
+    .wave-background {
+        position: fixed !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-size: cover !important;
+        z-index: -1;
     }
 }
