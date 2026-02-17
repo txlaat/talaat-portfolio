@@ -30,7 +30,12 @@ body {
 }
 
 /* --- Typography --- */
-h1, h2, h3, .logo, .section-title, .subsection-title {
+h1,
+h2,
+h3,
+.logo,
+.section-title,
+.subsection-title {
     font-family: var(--font-title);
     letter-spacing: 1px;
 }
@@ -388,7 +393,7 @@ header {
     color: #ccc;
     font-size: 16px;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
 }
 
@@ -431,7 +436,7 @@ header {
 }
 
 .workflow-item {
-    background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.2) 100%);
     padding: 30px 20px;
     border-radius: 15px;
     position: relative;
@@ -878,7 +883,7 @@ header {
 .footer-socials a {
     width: 45px;
     height: 45px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -899,7 +904,7 @@ header {
     color: #555;
     font-size: 14px;
     margin-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 20px;
     width: 100%;
 }
@@ -918,55 +923,125 @@ header {
 }
 
 @keyframes gradientWave {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes slideRight {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes slideLeft {
-    0% { transform: translateX(100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes slideTop {
-    0% { transform: translateY(100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes slideBottom {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes pulse {
-    0% { width: 100%; height: 100%; opacity: 1; }
-    100% { width: 300%; height: 300%; opacity: 0; }
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
 }
 
 @keyframes loading {
-    0% { left: -50%; }
-    100% { left: 100%; }
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 200%; }
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 200%;
+    }
 }
 
 @keyframes floatImage {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Scroll Animation Classes */
@@ -976,10 +1051,21 @@ header {
     transition: all 1s ease;
 }
 
-.from-left { transform: translateX(-100px); }
-.from-bottom { transform: translateY(100px); }
-.from-right { transform: translateX(100px); }
-.from-top { transform: translateY(-50px); }
+.from-left {
+    transform: translateX(-100px);
+}
+
+.from-bottom {
+    transform: translateY(100px);
+}
+
+.from-right {
+    transform: translateX(100px);
+}
+
+.from-top {
+    transform: translateY(-50px);
+}
 
 .animate-scroll.show-animate {
     opacity: 1;
@@ -996,39 +1082,45 @@ header {
         height: auto;
     }
 
-    .hero-text { max-width: 100%; }
-    
+    .hero-text {
+        max-width: 100%;
+    }
+
     .hero-img {
         width: 300px;
         height: 300px;
         margin-top: 30px;
     }
-    
+
     .hero-img img {
         width: 300px;
         height: 300px;
     }
 
-    .social-media a { margin: 20px 10px; }
-    
+    .social-media a {
+        margin: 20px 10px;
+    }
+
     .about-card {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .resume-container {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .contact-banner {
         flex-direction: column;
         text-align: center;
         gap: 30px;
         padding: 40px 20px;
     }
-    
-    .contact-text h2 { font-size: 28px; }
+
+    .contact-text h2 {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1036,7 +1128,7 @@ header {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .resume-container {
         flex-direction: column;
         gap: 30px;
@@ -1045,7 +1137,7 @@ header {
 
 
 @media (max-width: 991px) {
-    
+
     html {
         font-size: 90%;
         scroll-padding-top: 80px;
@@ -1061,7 +1153,7 @@ header {
         font-size: 13px;
         padding: 5px 10px;
     }
-    
+
     .logo {
         font-size: 20px;
     }
@@ -1137,7 +1229,6 @@ header {
         width: 100%;
     }
 
-    /* --- المشاريع --- */
     .projects-container {
         grid-template-columns: 1fr;
     }
@@ -1158,7 +1249,7 @@ header {
         text-align: center;
         gap: 30px;
     }
-    
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -1173,12 +1264,12 @@ header {
     .nav-links {
         display: none;
     }
-    
+
     .nav-links li a {
         font-size: 10px;
         padding: 5px;
     }
-    
+
     .hero-text h1 {
         font-size: 26px;
     }
