@@ -1169,3 +1169,36 @@ header {
         font-size: 16px;
     }
 }
+
+    .about-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        width: 100% !important;
+    }
+
+    .about-info {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .about-info h3 {
+        font-size: 22px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .about-info p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        text-align: justify !important;
+        text-align-last: center !important;
+    }
+
+    .about-details {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 15px !important;
+    }
