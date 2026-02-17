@@ -18,7 +18,7 @@ const observer = new IntersectionObserver((entries) => {
         // 1. If element is in view -> animate it
         if (entry.isIntersecting) {
             entry.target.classList.add('show-animate');
-        } 
+        }
         // 2. If element leaves view -> check position
         else {
             // Only reset animation if we scrolled UP (element is now below viewport)
@@ -44,7 +44,7 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         // Check if current scroll position is within this section
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
