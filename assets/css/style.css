@@ -546,7 +546,7 @@ header {
     background: #111;
     border-radius: 10px;
     position: relative;
-
+    overflow: hidden;
 }
 
 .loader-line::before {
