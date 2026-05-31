@@ -1,4 +1,23 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 export default function Projects() {
+  const images = [
+    "/assets/images/projects/motovroom/1.png",
+    "/assets/images/projects/motovroom/2.png",
+    "/assets/images/projects/motovroom/3.png",
+  ];
+  
+  const [currentImg, setCurrentImg] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImg((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="projects" className="projects-section">
       <div className="container">
@@ -7,19 +26,56 @@ export default function Projects() {
         </h2>
 
         <div className="projects-container">
-          <div className="project-card coming-soon animate-scroll from-bottom">
-            <div className="card-inner">
-              <div className="icon-box">
-                <i className="fas fa-rocket"></i>
+          
+          <div className="new-project-card animate-scroll from-bottom">
+            <div className="slider-container">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`MotoVroom Screenshot ${index + 1}`}
+                  className={`slider-img ${index === currentImg ? "active" : ""}`}
+                />
+              ))}
+              <div className="slider-indicators">
+                {images.map((_, index) => (
+                  <span
+                    key={index}
+                    className={`indicator ${index === currentImg ? "active" : ""}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setCurrentImg(index);
+                    }}
+                  ></span>
+                ))}
               </div>
-              <h3>Something Awesome is Brewing!</h3>
+            </div>
+
+            <div className="proj-content">
+              <h3>MotoVroom Shop</h3>
               <p>
-                I am currently working on some exciting projects. Stay tuned to
-                see my creative coding in action very soon.
+                A high-end, responsive ecommerce platform for motorcycle enthusiasts. 
+                Features dynamic product listings, a sleek shopping cart, and a modern UI.
               </p>
-              <div className="loader-line"></div>
+              
+              <div className="proj-tags">
+                <span className="proj-tag">Next.js</span>
+                <span className="proj-tag">React</span>
+                <span className="proj-tag">Tailwind CSS</span>
+                <span className="proj-tag">TypeScript</span>
+              </div>
+
+              <div className="proj-links">
+                <a href="https://motovroom-shop.vercel.app" target="_blank" rel="noreferrer" className="proj-btn primary">
+                  <i className="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="https://github.com/txlaat" target="_blank" rel="noreferrer" className="proj-btn secondary">
+                  <i className="fab fa-github"></i> GitHub
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
