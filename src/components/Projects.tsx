@@ -35,6 +35,7 @@ const projectsData: Project[] = [
       "/assets/images/projects/egytour/2.png",
       "/assets/images/projects/egytour/3.png",
       "/assets/images/projects/egytour/4.png",
+      "/assets/images/projects/egytour/5.png",
     ],
   }
 ];
