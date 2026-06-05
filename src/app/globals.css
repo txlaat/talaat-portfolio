@@ -367,7 +367,7 @@ header {
 }
 
 .subsection-title {
-    font-size: 28px;
+    font-size: 40px;
     color: #fff;
     margin-bottom: 30px;
     text-align: center;
@@ -378,7 +378,7 @@ header {
     width: 100%;
     max-width: 1000px;
     text-align: center;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
 }
 
 .skills-wrapper {
@@ -441,6 +441,7 @@ header {
 .workflow-container {
     width: 100%;
     max-width: 1000px;
+    margin: 0 auto;
 }
 
 .workflow-grid {
