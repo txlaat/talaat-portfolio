@@ -42,7 +42,7 @@ const projectsData: Project[] = [
     title: "Slizza",
     description: "An interactive 3D pizza ordering website. Experience the thrill of building your own pizza in a rich, real-time 3D environment before ordering.",
     tags: ["Next.js", "React", "Three.js", "Tailwind CSS"],
-    liveLink: "#",
+    liveLink: "https://slizaa.vercel.app",
     githubLink: "https://github.com/txlaat",
     images: [
       "/assets/images/projects/slizza/1.png",
