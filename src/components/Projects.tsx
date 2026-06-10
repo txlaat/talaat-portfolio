@@ -37,6 +37,19 @@ const projectsData: Project[] = [
       "/assets/images/projects/egytour/4.png",
       "/assets/images/projects/egytour/5.png",
     ],
+  },
+  {
+    title: "Slizza",
+    description: "An interactive 3D pizza ordering website. Experience the thrill of building your own pizza in a rich, real-time 3D environment before ordering.",
+    tags: ["Next.js", "React", "Three.js", "Tailwind CSS"],
+    liveLink: "#",
+    githubLink: "https://github.com/txlaat",
+    images: [
+      "/assets/images/projects/slizza/1.png",
+      "/assets/images/projects/slizza/2.png",
+      "/assets/images/projects/slizza/3.png",
+      "/assets/images/projects/slizza/4.png",
+    ],
   }
 ];
 
