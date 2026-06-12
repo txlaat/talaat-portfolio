@@ -50,6 +50,19 @@ const projectsData: Project[] = [
       "/assets/images/projects/slizza/3.png",
       "/assets/images/projects/slizza/4.png",
     ],
+  },
+  {
+    title: "Sovlen",
+    description: "A centralized command center for distributed teams, designed to eliminate context switching. It consolidates tools, chats, and tasks into a single AI-powered dashboard with real-time sync, universal search, custom workflows, and integrations with over 100 platforms.",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    liveLink: "https://sovlen.vercel.app",
+    githubLink: "https://github.com/txlaat",
+    images: [
+      "/assets/images/projects/Sovlen/1.png",
+      "/assets/images/projects/Sovlen/2.png",
+      "/assets/images/projects/Sovlen/3.png",
+      "/assets/images/projects/Sovlen/4.png",
+    ],
   }
 ];
 
