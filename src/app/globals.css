@@ -1307,6 +1307,9 @@ header {
 
 .proj-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .proj-content h3 {
@@ -1341,6 +1344,7 @@ header {
 .proj-links {
     display: flex;
     gap: 15px;
+    margin-top: auto;
 }
 
 .proj-btn {
